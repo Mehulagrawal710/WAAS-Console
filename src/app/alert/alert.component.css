@@ -1,0 +1,15 @@
+div {
+    position: fixed;
+    top: 3vh;
+    right: 1vw;
+    z-index: 10;
+    font-size: 0.85rem;
+    max-width: 25vw;
+    height: auto;
+}
+
+button{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

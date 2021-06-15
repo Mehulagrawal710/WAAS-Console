@@ -1,15 +1,18 @@
-<a routerLink="/home">Back to Home</a>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
             <div class="card">
-                <form class="box">
+                <form class="box" [formGroup]="userForm" (ngSubmit)="signup()">
+                    <a id="back-to-home" routerLink="/home">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                        Back to Home
+                    </a>
                     <h1>Signup</h1>
                     <p class="text-muted"> Please enter the details below to get started!</p>
-                    <input type="text" name="" placeholder="Username">
-                    <input type="password" name="" placeholder="Password">
-                    <input type="email" name="" placeholder="Email">
-                    <input type="submit" name="" value="Login" href="#">
+                    <input type="text" formControlName="username" placeholder="Username">
+                    <input type="password" formControlName="password" placeholder="Password">
+                    <input type="email" formControlName="email" placeholder="Email">
+                    <input type="submit" value="Signup">
                     <div class="col-md-12">
                         <ul class="social-network social-circle">
                             <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -17,6 +20,7 @@
                             <li><a href="#" class="icoGoogle" title="Google +"><i class="fab fa-google-plus"></i></a></li>
                         </ul>
                     </div>
+                    <a class="forgot text-muted" routerLink="/login">Already have an account? Login here</a>
                 </form>
             </div>
         </div>

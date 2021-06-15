@@ -1,3 +1,5 @@
+import { AlertService } from './../alert.service';
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  response:any;
+  
+
+  constructor(private http: HttpClient, private alertService:AlertService){
+    
+  }
 
   ngOnInit(): void {
+  }
+
+  test(){
+    this.alertService.alert("hello error has come", "warning");
   }
 
 }

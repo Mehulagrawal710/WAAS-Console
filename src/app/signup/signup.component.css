@@ -139,3 +139,12 @@ a.socialIcon:hover,
     transition: all 0.8s;
     transition: all 0.8s
 }
+
+#back-to-home{
+    font-size: 0.75rem;
+    text-decoration: none;
+    color: white;
+    position: inherit;
+    margin-left: -240px;
+    margin-top: -35px;
+}

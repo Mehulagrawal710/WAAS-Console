@@ -10,6 +10,9 @@ import { HomeComponent } from './home/home.component';
 import { ConsoleComponent } from './console/console.component';
 import { WidgetOverviewComponent } from './widget-overview/widget-overview.component';
 import { WidgetDesignComponent } from './widget-design/widget-design.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,15 @@ import { WidgetDesignComponent } from './widget-design/widget-design.component';
     HomeComponent,
     ConsoleComponent,
     WidgetOverviewComponent,
-    WidgetDesignComponent
+    WidgetDesignComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
